@@ -32,7 +32,7 @@ pipeline {
                         // remove container if it exists
                         ssh root@34.227.61.167 /var/projects/phpapp/updated_image_version.sh ${BUILD_NUMBER}
                     '''
-                    sh 'ssh root@34.227.61.167 /var/projects/phpapp/deploy.sh
+                    sh 'ssh root@34.227.61.167 /var/projects/phpapp/deploy.sh'
                 // Add your deploy commands here
                 }
                 
