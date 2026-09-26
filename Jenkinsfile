@@ -28,11 +28,11 @@ pipeline {
             steps {
                 script{
                     sh 'echo "Deploying the project..."'
-                    ssh '''
-                        // remove container if it exists
-                        ssh root@34.227.61.167 /var/projects/phpapp/updated_image_version.sh ${BUILD_NUMBER}
-                    '''
-                    sh 'ssh root@34.227.61.167 /var/projects/phpapp/deploy.sh'
+                    // ssh '''
+                    //     // remove container if it exists
+                    //     ssh root@34.227.61.167 /var/projects/phpapp/updated_image_version.sh ${BUILD_NUMBER}
+                    // '''
+                    sh 'ssh root@34.227.61.167 /var/projects/phpapp/deploy.sh ${BUILD_NUMBER}'
                 // Add your deploy commands here
                 }
                 
